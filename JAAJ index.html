@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<header>
+
+<img src="desktop/jaajlogo.png" alt="Jaaj Media Logo" width="120">
+
+<h1>Jaaj Media Studioz</h1>
+
+</header>
+<title>JAAJ MEDIA | Your Audiovisual Solution</title>
+<meta name="description" content="JAAJ MEDIA offers video production, audio recording, photography, live streaming, and media services. Book sessions online.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root {
+  --bg:#0b0b10;
+  --card:#14141c;
+  --accent:#c77dff;
+  --text:#fff;
+  --muted:#aaa;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:var(--bg);color:var(--text)}
+section{padding:80px 10%}
+h1,h2,h3{font-weight:700}
+.btn{background:var(--accent);border:none;padding:14px 28px;border-radius:30px;font-weight:600;cursor:pointer}
+.btn:hover{box-shadow:0 0 20px var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:30px}
+.card{background:var(--card);padding:30px;border-radius:16px;transition:.3s}
+.card:hover{transform:translateY(-5px)}
+input,select,textarea{width:100%;padding:14px;margin-bottom:15px;background:#1f1f2b;border:none;border-radius:10px;color:#fff}
+footer{text-align:center;padding:40px;border-top:1px solid #222;color:var(--muted)}
+.hero{min-height:100vh;display:flex;align-items:center;
+background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),
+url('https://images.unsplash.com/photo-1511379938547-c1f69419868d')center/cover}
+.hero-content{max-width:700px}
+.hero span{color:var(--accent)}
+.whatsapp{
+position:fixed;bottom:20px;right:20px;background:#25d366;
+color:#000;padding:14px 18px;border-radius:50px;font-weight:600}
+@media(max-width:768px){section{padding:60px 6%}}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>JAAJ <span>MEDIA</span></h1>
+    <h3>Your Audiovisual Solution</h3>
+    <p>Professional video, audio, photography, live streaming and creative media services.</p>
+    <a href="#booking"><button class="btn">Book a Session</button></a>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section>
+  <div class="grid">
+    <div class="card">🎬 Professional Equipment</div>
+    <div class="card">🎧 Industry Sound Quality</div>
+    <div class="card">⚡ Fast Turnaround</div>
+    <div class="card">🤝 Trusted by Creators & Brands</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section>
+<h2>Services</h2>
+<div class="grid">
+<div class="card">Video Shooting</div>
+<div class="card">Video Editing</div>
+<div class="card">Wedding Coverage</div>
+<div class="card">Documentary Production</div>
+<div class="card">Photography & Photoshoot</div>
+<div class="card">Live Streaming</div>
+<div class="card">Beat Programming</div>
+<div class="card">Audio Recording</div>
+<div class="card">Editing & Mixing</div>
+<div class="card">Mastering</div>
+</div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+<h2>Book a Session</h2>
+
+<form onsubmit="sendWhatsApp();return false;">
+<input id="name" placeholder="Full Name" required>
+<input id="phone" placeholder="Phone Number" required>
+<input id="location" placeholder="Location / Venue">
+
+<select id="service" required>
+<option value="">Select Service</option>
+<option value="Video Shooting">Video Shooting</option>
+<option value="Video Editing">Video Editing</option>
+<option value="Wedding Coverage">Wedding Coverage</option>
+<option value="Documentary">Documentary</option>
+<option value="Photography">Photography & Photoshoot</option>
+<option value="Live Streaming">Live Streaming</option>
+<option value="Beat Programming">Beat Programming</option>
+<option value="Audio Recording">Audio Recording</option>
+<option value="Editing & Mixing">Editing & Mixing</option>
+<option value="Mastering">Mastering</option>
+</select>
+
+<select id="duration">
+<option>1 Hour</option>
+<option>2 Hours</option>
+<option>Half Day</option>
+<option>Full Day</option>
+<option>3 Days</option>
+</select>
+
+<input id="date" type="date" required>
+
+<textarea id="details" rows="4" placeholder="Project details"></textarea>
+
+<p><strong>Estimated Price:</strong> <span id="price">₦0</span></p>
+
+<button class="btn">Submit Booking</button>
+</form>
+</section>
+
+<!-- CONTACT -->
+<section>
+<h2>Contact</h2>
+<p>Email: jaajmedia20@email.com</p>
+<p>Phone: +254 797006219</p>
+<p>• YouTube • Facebook • instagram</p>
+<a href="https://www.facebook.com/people/JAAJ-MEDIA/100086675542919/" target="_blank">
+<i class="fa-brands fa-facebook" style="font-size:30px;color:#1877F2;"></i>
+</a>
+
+<a href="https://www.youtube.com/@jaajmedia2118" target="_blank">
+<i class="fa-brands fa-youtube" style="font-size:30px;color:red;"></i>
+</a>
+
+</section>
+
+<footer>
+© 2026 JAAJ MEDIA — Your Audiovisual Solution
+</footer>
+
+<a class="whatsapp" href="https://wa.me/+254797006219" target="_blank">WhatsApp</a>
+
+<script>
+const prices = {
+  "Video Shooting": 50000,
+  "Video Editing": 30000,
+  "Wedding Coverage": 200000,
+  "Documentary": 150000,
+  "Photography": 40000,
+  "Live Streaming": 80000,
+  "Beat Programming": 5000,
+  "Audio Recording": 30000,
+  "Editing & Mixing": 30000,
+  "Mastering": 15000
+};
+
+const durationMultiplier = {
+  "1 Hour": 1,
+  "2 Hours": 1.7,
+  "Half Day": 3,
+  "Full Day": 5
+};
+
+const serviceEl = document.getElementById("service");
+const durationEl = document.getElementById("duration");
+const priceEl = document.getElementById("price");
+
+function updatePrice() {
+  const service = serviceEl.value;
+  const duration = durationEl.value;
+  const base = prices[service] || 0;
+  const total = base * (durationMultiplier[duration] || 1);
+  priceEl.innerText = "KES " + total.toLocaleString();
+}
+
+serviceEl.addEventListener("change", updatePrice);
+durationEl.addEventListener("change", updatePrice);
+
+document.getElementById("date").min =
+  new Date().toISOString().split("T")[0];
+
+function sendWhatsApp() {
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const location = document.getElementById("location").value;
+  const service = serviceEl.value;
+  const duration = durationEl.value;
+  const date = document.getElementById("date").value;
+  const details = document.getElementById("details").value;
+
+  const message = `
+📌 *JAAJ MEDIA Booking Request*
+
+👤 Name: ${name}
+📞 Phone: ${phone}
+🎬 Service: ${service}
+⏱ Duration: ${duration}
+📅 Date: ${date}
+📍 Location: ${location}
+
+📝 Details:
+${details}
+  `;
+
+  window.open(
+    "https://wa.me/+254797006219?text=" + encodeURIComponent(message),
+    "_blank"
+  );
+}
+</script>
+
+</body>
+</html>
+
